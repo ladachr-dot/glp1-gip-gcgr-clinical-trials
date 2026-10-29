@@ -10,7 +10,7 @@ RAW_DIR.mkdir(parents=True, exist_ok=True)
 
 DRUGS = [
     "semaglutide", "tirzepatide", "retatrutide", "survodutide",
-    "mazdutide", "cagrilintide", "orforglipron",
+    "mazdutide", "orforglipron",
 ]
 
 
