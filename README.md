@@ -16,7 +16,7 @@
 
 1. Загрузка через API: `src/download.py`.
 2. Разбор JSON в таблицу «одно исследование — одна строка»: `src/parse.py`.
-3. Анализ и графики: `notebooks/analysis.ipynb`.
+3. Анализ и графики: `src/analysis.py` (запускается одной командой, сохраняет графики в `figures/`). Тот же анализ с пояснениями: `notebooks/analysis.ipynb`.
    - число стартов по годам и препаратам;
    - показания по ключевым словам в условиях исследования (диабет, ожирение, печень, сердечно-сосудистые, почки, здоровые добровольцы);
    - доли фаз (по наибольшей указанной фазе);
@@ -87,12 +87,13 @@ python -m venv .venv
 pip install -r requirements.txt
 python src/download.py
 python src/parse.py
+python src/analysis.py
 ```
 
-Затем открыть `notebooks/analysis.ipynb`.
+`src/analysis.py` печатает ключевые числа и перезаписывает графики в `figures/`. Пояснения к анализу: `notebooks/analysis.ipynb`.
 
 ## Структура
-- `src/` скрипты загрузки и разбора
+- `src/` скрипты загрузки, разбора и анализа
 - `data/clean/` итоговая таблица
-- `notebooks/` анализ
+- `notebooks/` анализ с пояснениями
 - `figures/` графики
